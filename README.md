@@ -1,12 +1,23 @@
-<h1>Failed RDP to IP Geolocation Information</h1>
+<h1>Azure Sentinel Lab - Log Failed RDP Attacks</h1>
 
 
- ### [YouTube Demonstration (@16:20)](https://youtu.be/RoZeVbbZ0o0?t=980)
 
-
-<h2>Description</h2>
-<b>The Powershell script in this repository is responsible for parsing out Windows Event Log information for failed RDP attacks and using a third party API to collect geographic information about the attackers location.
+<h2>Descrição</h2>
+<b>O Script feito em Powershell nesse repositório é responsável por analisar as informações do Windows Event relacionadas a ataques RDP Brute Force (Remote Desktop Protocol). Quando atuando em conjunto com uma API de geolocalização aberta e com o Azure Sentinel configurado e conectado a uma máquina virtual atuando como honey pot, é capaz de mostrar as informações geográficas dos ataques e sua posição no mapa mundi do Azure Sentinel.
 </b>
+
+<br />
+<br />
+<h3>Principais pontos do projeto:</h3>
+<br />
+
+- Desenvolvimento de script PowerShell personalizado para extrair metadados do Windows Event Viewer e fazer o encaminhamento à API open source para tratar os
+dados e mostrar geolocalização dos eventos.<br /><br />
+- Configuração do Log Analytics Workspace no Azure para inserir logs personalizados contendo informações geográficas (Latitude, Longitude, Estado e País).<br /><br />
+- Configuração de campos personalizados no Log Analytics Workspace do Azure para mapeamento de dados geográficos no Azure Sentinel.<br /><br />
+- Configuração do Azure Sentinel (Cloud SIEM) workbook para exibir ataques globais (RDP brute force) em um mapa de acordo com a localização e magnitude dos
+ataques.<br /><br />
+- Criação e configuração de máquinas virtuais no Azure
 <br />
 <br />
 The script is used in this demo where I setup Azure Sentinel (SIEM) and connect it to a live virtual machine acting as a honey pot.
@@ -18,13 +29,13 @@ look up the attackers Geolocation information and plot it on an Azure Sentinel M
 <p align="center">
 <img src="https://i.imgur.com/3d3CEwZ.png" height="85%" width="85%" alt="RDP event fail logs to iP Geographic information"/>
 </p>
-<h2>Languages Used</h2>
+<h2>Linguagens</h2>
 
-- <b>PowerShell:</b> Extract RDP failed logon logs from Windows Event Viewer 
+- <b>PowerShell:</b> Extração dos logs de Logon do Windows Event Viewer
 
-<h2>Utilities Used</h2>
+<h2>Utilidades</h2>
 
-- <b>ipgeolocation.io:</b> IP Address to Geolocation API
+- <b>ipgeolocation.io:</b> Retorna informações geográficas de um determinado IP
 
 <h2>Attacks from China coming in; Custom logs being output with geodata</h2>
 
