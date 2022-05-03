@@ -20,15 +20,20 @@ ataques.<br /><br />
 - Criação e configuração de máquinas virtuais no Azure
 <br />
 <br />
-The script is used in this demo where I setup Azure Sentinel (SIEM) and connect it to a live virtual machine acting as a honey pot.
-We will observe live attacks (RDP Brute Force) from all around the world. I will use a custom PowerShell script to
-look up the attackers Geolocation information and plot it on an Azure Sentinel Map!
-<br />
-<br />
+
 
 <p align="center">
 <img src="https://i.imgur.com/3d3CEwZ.png" height="85%" width="85%" alt="RDP event fail logs to iP Geographic information"/>
 </p>
+<br />
+<p align="center">
+<img src="https://i.imgur.com/lzuZc1b.png" height="85%" width="85%" alt="RDP event fail logs to iP Geographic information"/>
+</p>
+<br />
+<p align="center">
+<img src="https://i.imgur.com/s2iIBGv.png" height="85%" width="85%" alt="RDP event fail logs to iP Geographic information"/>
+</p>
+<br />
 <h2>Linguagens</h2>
 
 - <b>PowerShell:</b> Extração dos logs de Logon do Windows Event Viewer
@@ -37,16 +42,16 @@ look up the attackers Geolocation information and plot it on an Azure Sentinel M
 
 - <b>ipgeolocation.io:</b> Retorna informações geográficas de um determinado IP
 
-<h2>Attacks from China coming in; Custom logs being output with geodata</h2>
+<h2>Ataques vindo da Russia sendo registrados em log com informações geográficas</h2>
 
 <p align="center">
-<img src="https://i.imgur.com/LhDCRz4.jpeg" height="85%" width="85%" alt="Image Analysis Dataflow"/>
+<img src="https://i.imgur.com/7gutzhV.png" height="85%" width="85%" alt="Image Analysis Dataflow"/>
 </p>
 
-<h2>World map of incoming attacks after 24 hours (built custom logs including geodata)</h2>
+<h2>Mapa Mundi mostrando últimos ataques RDP registrados ao redor do mundo com informações geográficas.</h2>
 
 <p align="center">
-<img src="https://i.imgur.com/krRFrK5.png" height="85%" width="85%" alt="Image Analysis Dataflow"/>
+<img src="https://i.imgur.com/fWoHC9w.png" height="85%" width="85%" alt="Image Analysis Dataflow"/>
 </p>
 
 
